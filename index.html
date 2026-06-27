@@ -1,13 +1,189 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Minimal by Steve Smith</title>
+    <title>Peisong Niu 牛培淞 | Personal Homepage</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width">
+    <meta
+      name="description"
+      content="Personal academic homepage with about, experience, publication, education, awards, and profile links."
+    >
+    <style>
+      header .profile-summary {
+        color:#777;
+      }
+
+      header ul.icon-links {
+        background:none;
+        border:0;
+        height:auto;
+        list-style:none;
+        margin:0 0 20px;
+        padding:0;
+        position:static;
+        width:auto;
+      }
+
+      header ul.icon-links li,
+      header ul.icon-links li + li + li {
+        border:0;
+        float:none;
+        height:auto;
+        margin:0 0 4px;
+        width:auto;
+      }
+
+      header ul.icon-links a,
+      header ul.icon-links .profile-location {
+        align-items:center;
+        background:none;
+        border:0;
+        color:#595959;
+        display:inline-flex;
+        font-size:14px;
+        font-weight:400;
+        gap:7px;
+        justify-content:flex-start;
+        line-height:1.5;
+        min-height:18px;
+        padding:0;
+        width:auto;
+      }
+
+      header ul.icon-links a:hover,
+      header ul.icon-links a:focus {
+        color:#069;
+      }
+
+      .icon {
+        fill:none;
+        flex:0 0 14px;
+        height:14px;
+        stroke:currentColor;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+        stroke-width:2;
+        width:14px;
+      }
+
+      .entry {
+        border-bottom:1px solid #e5e5e5;
+        margin-bottom:22px;
+        padding-bottom:18px;
+      }
+
+      .entry:last-child {
+        border-bottom:0;
+      }
+
+      .date {
+        color:#777;
+        font-size:12px;
+        font-weight:600;
+        letter-spacing:0.04em;
+        margin-bottom:6px;
+        text-transform:uppercase;
+      }
+
+      .meta {
+        color:#777;
+        font-weight:500;
+        margin-bottom:8px;
+      }
+
+      .publication {
+        counter-increment: publication;
+        margin-bottom:18px;
+      }
+
+      section {
+        counter-reset: publication;
+      }
+
+      .publication-note {
+        color:#777;
+        font-size:11px;
+        line-height:1.35;
+        margin-top:-10px;
+      }
+
+      .publication-title {
+        color:#333;
+        font-weight:500;
+        line-height:1.35;
+        margin-bottom:3px;
+      }
+
+      .publication-title::before {
+        color:#777;
+        content:counter(publication) ". ";
+        font-weight:500;
+      }
+
+      .publication-authors {
+        color:#666;
+        font-size:13px;
+        line-height:1.45;
+        margin-bottom:0;
+      }
+
+      .publication-description {
+        color:#777;
+        font-size:12px;
+        line-height:1.45;
+        margin:5px 0 0;
+        padding-left:14px;
+        position:relative;
+      }
+
+      .publication-description::before {
+        color:#999;
+        content:"•";
+        left:0;
+        position:absolute;
+      }
+
+      .paper-badge {
+        color:#c0392b;
+        font-weight:600;
+      }
+
+      .award-list {
+        list-style:none;
+        padding:0;
+      }
+
+      .award-list li {
+        border-bottom:1px solid #e5e5e5;
+        padding:0 0 10px;
+      }
+
+      .award-list li + li {
+        padding-top:10px;
+      }
+
+      .award-list li:last-child {
+        border-bottom:0;
+      }
+
+      .award-list span {
+        color:#777;
+        display:inline-block;
+        font-weight:600;
+        min-width:86px;
+      }
+
+      @media print, screen and (max-width:480px) {
+        .award-list span {
+          display:block;
+          margin-bottom:2px;
+        }
+      }
+    </style>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -15,191 +191,208 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Minimal</h1>
-        <p>A Theme for GitHub Pages</p>
-        <p class="view"><a href="http://github.com/orderedlist/minimal">View the Project on GitHub <small>orderedlist/minimal</small></a></p>
-        <ul>
-          <li><a href="https://github.com/orderedlist/minimal/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/orderedlist/minimal/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="http://github.com/orderedlist/minimal">Fork On <strong>GitHub</strong></a></li>
+        <h1>Peisong Niu 牛培淞</h1>
+        <p>Senior Algorithm Engineer & AI Researcher</p>
+        <p class="profile-summary">
+          Wearable Health Intelligence | Time-Series Analysis | Weather Foundation Models | Large Language Models
+        </p>
+
+        <ul class="icon-links" aria-label="Profile links">
+          <li>
+            <span class="profile-location" aria-label="Location">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Hangzhou, China</span>
+            </span>
+          </li>
+          <li>
+            <a href="mailto:niupsong@gmail.com" aria-label="Email">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m3 7 9 6 9-6"></path>
+              </svg>
+              <span>Email</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/PSacfc"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+            >
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.1-1.3-.4-2.6-1.3-3.5.4-1.2.4-2.5 0-3.5 0 0-1-.3-3.5 1.3a12.3 12.3 0 0 0-6.4 0C6.3 2.2 5.3 2.5 5.3 2.5c-.4 1-.4 2.3 0 3.5A5 5 0 0 0 4 9.5C4 13 7 15 10 15a4.8 4.8 0 0 0-1 3.5v4"></path>
+                <path d="M9 18c-4.5 2-5-2-7-2"></path>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://scholar.google.com/citations?user=MP7182IAAAAJ"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Google Scholar"
+            >
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 10 12 5 2 10l10 5 10-5Z"></path>
+                <path d="M6 12v5c3 2 9 2 12 0v-5"></path>
+              </svg>
+              <span>Google Scholar</span>
+            </a>
+          </li>
         </ul>
       </header>
+
       <section>
-        <h1>GitHub Flavored Markdown</h1>
+        <h2 id="about">About</h2>
+        <p>
+          I am a Senior Algorithm Engineer at Ant Group, working on wearable health intelligence. 
+          My current focus is on using LLMs to support health understanding and interpretation from long-term wearable data。
+          Previously, I worked at Alibaba DAMO Academy (<a href="https://github.com/DAMO-DI-ML" target="_blank" rel="noreferrer">DAMO-DI-M Lab</a>) 
+          on foundation models for weather forecasting and LLM-based time-series analysis.
+        </p>
 
-        <p><em>View the <a href="http://github.github.com/github-flavored-markdown/sample_content.html">source of this content</a>.</em></p>
+        <h2 id="experience">Experience</h2>
+        <div class="entry">
+          <p class="date">2026 - Present</p>
+          <p class="meta">Ant Group</p>
+          <p>
+            Advancing wearable health intelligence through LLM-based modeling, analysis, and interpretation of long-term personal sensing data.
+          </p>
+        </div>
+        <div class="entry">
+          <p class="date">2022 - 2026</p>
+          <p class="meta">Alibaba DAMO Academy</p>
+          <p>
+            Developing learning-based forecasting methods for real-world sequential data, spanning LLM-based time-series forecasting and weather foundation models.
+          </p>
+        </div>
 
-        <p>Let's get the whole "linebreak" thing out of the way. The next paragraph contains two phrases separated by a single newline character:</p>
+        <h2 id="publication">Publications</h2>
+        <p class="publication-note">
+          For the full publication list, please see my
+          <a
+            href="https://scholar.google.com/citations?user=MP7182IAAAAJ"
+            target="_blank"
+            rel="noreferrer"
+          >Google Scholar</a>.
+        </p>
+        <div class="publication">
+          <p class="publication-title">
+            [ECCV 2026] Pushing the Limits of High-Resolution Weather Forecasting through Data Scaling
+          </p>
+          <p class="publication-authors">
+            Yang Zhao*, <strong>Peisong Niu*</strong>, Tian Zhou*, Ziqing Ma, Guanlong Ma, Rong Jin, Huiling Yuan†, Liang Sun†
+            <!-- <a href="">[pdf]</a> -->
+          </p>
+        </div>
+        <div class="publication">
+          <p class="publication-title">
+            [KDD 2026] Integrating Weather Foundation Model and Satellite to Enable Fine-Grained Solar Irradiance Forecasting
+            <a href="https://arxiv.org/abs/2603.14845">[pdf]</a>
+          </p>
+          <p class="publication-authors">
+            Ziqing Ma*, Kai Ying*, Xinyue Gu*, Tian Zhou*, Tianyu Zhu*, Haifan Zhang, <strong>Peisong Niu</strong>, Zheng Wang, Cong Bai, Liang Sun
+          </p>
+        </div>
 
-        <p>Roses are red<br>
-        Violets are blue</p>
+        <div class="publication">
+          <p class="publication-title">
+            [CIKM 2025] SolarMAE: A Unified framework for Regional Centralized and Distributed Solar Power Forecasting with Weather Pre-training
+            <a href="https://dl.acm.org/doi/10.1145/3746252.3761543">[pdf]</a>
+          </p>
+          <p class="publication-authors">
+            Jin Wang*, Bingqing Peng*, Wenwei Wang*, Yuanjie Hu, Yuejiang Chen, <strong>Peisong Niu</strong>, Liang Sun
+          </p>
+        </div>
+        
+        <div class="publication">
+          <p class="publication-title">
+            [KDD 2025] Utilizing Strategic Pre-training to Reduce Overfitting: Baguan-A Pre-trained Weather Forecasting Model
+            <a href="https://arxiv.org/abs/2505.13873">[pdf]</a>
+          </p>
+          <p class="publication-authors">
+            <strong>Peisong Niu*</strong>, Ziqing Ma*, Tian Zhou*, Weiqi Chen, Lefei Shen, Rong Jin, Liang Sun†
+          </p>
+        </div>
 
-        <p>The next paragraph has the same phrases, but now they are separated by two spaces and a newline character:</p>
+        <div class="publication">
+          <p class="publication-title">
+            [arXiv 2024] Understanding the Role of Textual Prompts in LLM for Time Series Forecasting: an Adapter View
+            <a href="https://arxiv.org/abs/2311.14782">[pdf]</a>
+          </p>
+          <p class="publication-authors">
+            <strong>Peisong Niu*</strong>, Tian Zhou*, Xue Wang, Liang Sun, Rong Jin†
+          </p>
+        </div>
 
-        <p>Roses are red<br><br>
-        Violets are blue</p>
+        <div class="publication">
+          <p class="publication-title">
+            [NeurIPS 2023 <span class="paper-badge">Spotlight</span>] One Fits All: Power General Time Series Analysis by Pretrained LM
+            <a href="https://arxiv.org/abs/2302.11939">[pdf]</a> 
+            <a href="https://github.com/DAMO-DI-ML/NeurIPS2023-One-Fits-All">[code]</a>
+          </p>
+          <p class="publication-authors">
+            Tian Zhou*, <strong>Peisong Niu*</strong>, Xue Wang*, Liang Sun, Rong Jin†
+          </p>
+        </div>
+        
+        <div class="publication">
+          <p class="publication-title">
+            [AAAI - IAAI 2023] eForecaster: Unifying Electricity Forecasting with Robust, Flexible, and Explainable Machine Learning Algorithms
+            <a href="https://ojs.aaai.org/index.php/AAAI/article/view/26853">[pdf]</a> 
+          </p>
+          <p class="publication-authors">
+            Zhaoyang Zhu*, Weiqi Chen*, Rui Xia, Tian Zhou, <strong>Peisong Niu</strong>, Bingqing Peng, Wenwei Wang, Hengbo Liu, Ziqing Ma, Qingsong Wen, Liang Sun†
+          </p>
+        </div>
 
-        <p>Oh, and one thing I cannot stand is the mangling of words with multiple underscores in them like perform_complicated_task or do_this_and_do_that_and_another_thing.</p>
+        <div class="publication">
+          <p class="publication-title">
+            [NeurIPS 2022 Workshop AI4Science] Chemistry Guided Molecular Graph Transformer
+            <a href="https://openreview.net/forum?id=Us3TminqU8v">[pdf]</a> 
+          </p>
+          <p class="publication-authors">
+            <strong>Peisong Niu*</strong>, Tian Zhou*†, Qingsong Wen, Liang Sun, Tao Yao
+          </p>
+        </div>
 
-        <h2>A bit of the GitHub spice</h2>
+        <div class="publication">
+          <p class="publication-title">
+            [CVPR 2021] Indoor Lighting Estimation using an Event Camera
+            <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Chen_Indoor_Lighting_Estimation_Using_an_Event_Camera_CVPR_2021_paper.pdf">[pdf]</a> 
+          </p>
+          <p class="publication-authors">
+            Zehao Chen*, Qian Zheng*, <strong>Peisong Niu</strong>, Huajin Tang, Gang Pan†
+          </p>
+        </div>
 
-        <p>In addition to the changes in the previous section, certain references are auto-linked:</p>
+        <h2 id="education">Education</h2>
+        <div class="entry">
+          <p class="date">2019 - 2022</p>
+          <h3>M.S. in Computer Science and Technology</h3>
+          <p class="meta">Zhejiang University</p>
+          <p>Brain-inspired Computing · Brain-inspired Memory Architecture · Neuromorphic Vision.</p>
+        </div>
+        <div class="entry">
+          <p class="date">2015 - 2019</p>
+          <h3>B.S. in Communication Engineering</h3>
+          <p class="meta">Chang'an University</p>
+        </div>
 
-        <ul>
-          <li>SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2</li>
-          <li>User@SHA ref: <a href="https://github.com/mojombo/product/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2" class="commit-link">mojombo@<tt>be6a8cc</tt></a></li>
-          <li>User/Project@SHA: <a href="https://github.com/mojombo/god/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2" class="commit-link">mojombo/god@<tt>be6a8cc</tt></a></li>
-          <li>#Num: <a href="https://github.com/github/product/issues/1" class="issue-link" title="Baseline: What is up in the air right now?">#1</a></li>
-          <li>User/#Num: mojombo#1</li>
-          <li>User/Project#Num: <a href="https://github.com/mojombo/god/issues/1" class="issue-link" title="The server is not available (or you do not have permissions to access it)">mojombo/god#1</a></li>
+        <h2 id="awards">Awards</h2>
+        <ul class="award-list">
+          <li><span>2017</span> ACM-ICPC Asia Beijing Regional, <strong>Gold Medal</strong></li>
+          <li><span>2017</span> CCPC Hangzhou Site, <strong>Gold Medal</strong></li>
         </ul>
-
-        <p>These are dangerous goodies though, and we need to make sure email addresses don't get mangled:</p>
-
-        <p>My email addy is <a href="mailto:tom@github.com">tom@github.com</a>.</p>
-
-        <h2>Math is hard, let's go shopping</h2>
-
-        <p>In first grade I learned that 5 &gt; 3 and 2 &lt; 7. Maybe some arrows. 1 -&gt; 2 -&gt; 3. 9 &lt;- 8 &lt;- 7.</p>
-
-        <p>Triangles man! a^2 + b^2 = c^2</p>
-
-        <h2>We all like making lists</h2>
-
-        <p>The above header should be an H2 tag. Now, for a list of fruits:</p>
-
-        <ul>
-          <li>Red Apples</li>
-          <li>Purple Grapes</li>
-          <li>Green Kiwifruits</li>
-        </ul>
-
-        <p>Let's get crazy:</p>
-
-        <ol>
-          <li>
-            <p>This is a list item with two paragraphs. Lorem ipsum dolor<br>
-            sit amet, consectetuer adipiscing elit. Aliquam hendrerit<br>
-            mi posuere lectus.</p>
-
-            <p>Vestibulum enim wisi, viverra nec, fringilla in, laoreet<br>
-            vitae, risus. Donec sit amet nisl. Aliquam semper ipsum<br>
-            sit amet velit.</p>
-          </li>
-          <li><p>Suspendisse id sem consectetuer libero luctus adipiscing.</p></li>
-        </ol>
-
-        <p>What about some code <strong>in</strong> a list? That's insane, right?</p>
-
-        <ol>
-          <li>
-            <p>In Ruby you can map like this:</p>
-
-            <pre><code>['a', 'b'].map { |x| x.uppercase }</code></pre>
-          </li>
-          <li>
-            <p>In Rails, you can do a shortcut:</p>
-
-            <pre><code>['a', 'b'].map(&amp;:uppercase)</code></pre>
-          </li>
-        </ol>
-
-        <p>Some people seem to like definition lists</p>
-
-        <dl>
-          <dt>Lower cost</dt>
-          <dd>The new version of this product costs significantly less than the previous one!</dd>
-          <dt>Easier to use</dt>
-          <dd>We've changed the product so that it's much easier to use!</dd>
-        </dl>
-
-        <h2>I am a robot</h2>
-
-        <p>Maybe you want to print <code>robot</code> to the console 1000 times. Why not?</p>
-
-        <pre><code>def robot_invasion
-  puts("robot " * 1000)
-end
-</code></pre>
-
-        <p>You see, that was formatted as code because it's been indented by four spaces.</p>
-
-        <p>How about we throw some angle braces and ampersands in there?</p>
-
-        <pre><code>&lt;div class="footer"&gt;
-    &amp;copy; 2004 Foo Corporation
-&lt;/div&gt;
-</code></pre>
-
-        <h2>Set in stone</h2>
-
-        <p>Preformatted blocks are useful for ASCII art:</p>
-
-        <pre>             ,-.
-    ,     ,-.   ,-.
-   / \   (   )-(   )
-   \ |  ,.&gt;-(   )-&lt;
-    \|,' (   )-(   )
-     Y ___`-'   `-'
-     |/__/   `-'
-     |
-     |
-     |    -hrr-
-  ___|_____________
-</pre>
-
-        <h2>Playing the blame game</h2>
-
-        <p>If you need to blame someone, the best way to do so is by quoting them:</p>
-
-        <blockquote>
-        <p>I, at any rate, am convinced that He does not throw dice.</p>
-        </blockquote>
-
-        <p>Or perhaps someone a little less eloquent:</p>
-
-        <blockquote>
-        <p>I wish you'd have given me this written question ahead of time so I<br>
-        could plan for it... I'm sure something will pop into my head here in<br>
-        the midst of this press conference, with all the pressure of trying to<br>
-        come up with answer, but it hadn't yet...</p>
-
-        <p>I don't want to sound like<br>
-        I have made no mistakes. I'm confident I have. I just haven't - you<br>
-        just put me under the spot here, and maybe I'm not as quick on my feet<br>
-        as I should be in coming up with one.</p>
-        </blockquote>
-
-        <h2>Table for two</h2>
-
-        <table>
-          <tbody>
-        <tr>
-            <th>ID</th>
-        <th>Name</th>
-        <th>Rank</th>
-          </tr>
-          <tr>
-            <td>1</td>
-        <td>Tom Preston-Werner</td>
-        <td>Awesome</td>
-          </tr>
-          <tr>
-            <td>2</td>
-        <td>Albert Einstein</td>
-        <td>Nearly as awesome</td>
-          </tr>
-        </tbody>
-        </table>
-
-        <h2>Crazy linking action</h2>
-
-        <p>I get 10 times more traffic from <a href="http://google.com/" title="Google">Google</a> than from<br>
-        <a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
       </section>
+
       <footer>
-        <p>This project is maintained by <a href="http://github.com/orderedlist">Steve Smith</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p><small>Last updated: June 2026</small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
